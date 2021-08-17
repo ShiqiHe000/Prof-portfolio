@@ -1,0 +1,54 @@
+@import "./variables";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    background-color: black;
+    font-family: $font-family-popin;
+    color: white;
+}
+
+.container {
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.selected{
+    color: $clr-blue-grey !important;
+}
+
+@media screen and (min-width: $break-large) and (min-height: $break-medium) {
+    .scrollControl {
+        scroll-snap-type: y mandatory;
+        overflow-y: auto;
+        overflow-x: hidden;
+        height: 100vh;
+    }
+
+    .scrollType {
+        scroll-snap-align: start;
+        height: 100vh;
+    }
+}

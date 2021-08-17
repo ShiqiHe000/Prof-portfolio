@@ -1,0 +1,70 @@
+@import "../../scss/variables";
+
+$card-height: 150px;
+$card-width: 300px;
+
+.container {
+    position: relative;
+}
+
+.title {
+    font-family: $font-family-playfair;
+    margin-top: 4rem;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.2;
+}
+
+.illutration {
+    display: none;
+}
+
+.card {
+    padding: 1rem;
+    border-radius: 10px;
+    color: black;
+    width: 100%;
+    height: $card-height;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s ease;
+    
+    &:hover {
+        transform: translateY(-10px);
+    }
+
+    .icon {
+        font-size: 2rem;
+    }
+
+    .info {
+        display: block;
+        margin-top: 1rem;
+        word-wrap: break-word;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+.card1 {
+    background-color: $clr-pink;
+}
+
+.card2 {
+    background-color: $clr-grey-red;
+    margin-top: -1rem;
+}
+
+.card3 {
+    background-color: $clr-grey-blue;
+    margin-top: -1rem;
+}

@@ -1,0 +1,34 @@
+@import "../../scss/variables";
+
+.container {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    text-align: center;
+    font-family: $font-family-playfair;
+}
+
+.canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+@media screen and (min-width: $break-large) {
+    .title {
+        font-size: 5rem;
+    }
+}
+
+// height control
+// @media screen and (min-height: $break-medium) {
+//     .container {
+//     }
+// }

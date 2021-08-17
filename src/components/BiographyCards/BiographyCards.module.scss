@@ -1,0 +1,77 @@
+@import "../../scss/variables";
+
+.title {
+    font-family: $font-family-playfair;
+    font-weight: $font-weight-bold;
+}
+
+.mainTitle {
+    margin-top: 5rem;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    letter-spacing: 2px;
+}
+
+.card {
+    padding: 1rem;
+    background-color: rgba($color: $clr-brown, $alpha: 0.7);
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.btn {
+    outline: none;
+    background: $clr-dirt-red;
+    color: white;
+    padding: 1rem;
+    display: block;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 2rem;
+
+    &:hover .arrow {
+        animation: arrow-left 0.7s linear infinite;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+        font-weight: $font-weight-semi-bold;
+    }
+}
+
+.arrow {
+    margin-right: 1rem;
+}
+
+@media screen and (min-width: $break-large) {
+    .card {
+        text-align: left;
+    }
+
+    .btn {
+        width: auto;
+    }
+}
+
+@keyframes arrow-left {
+    0% {
+        transform: translateX(0);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: translateX(-5px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-10px);
+        opacity: 0.5;
+    }
+}
