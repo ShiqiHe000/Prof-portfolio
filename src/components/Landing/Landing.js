@@ -7,7 +7,7 @@ const Landing = () => {
     const canvas = useRef();
 
     useEffect(() => {
-        // drawBackground(canvas.current);
+        drawBackground(canvas.current);
     }, []);
 
     return (

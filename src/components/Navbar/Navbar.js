@@ -59,9 +59,14 @@ const Navbar = () => {
                         </a>
                     </li>
                     <li>
-                        <a to="/" onClick={toggleNavbar}>
+                    <NavHashLink
+                            to="/#contact"
+                            onClick={toggleNavbar}
+                            activeClassName="selected"
+                            smooth
+                            >
                             Contacts
-                        </a>
+                        </NavHashLink>
                     </li>
                 </ul>
             </nav>

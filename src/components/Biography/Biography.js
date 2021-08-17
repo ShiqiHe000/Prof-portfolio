@@ -41,7 +41,10 @@ const Biography = () => {
                                     icon={faPhoneAlt}
                                 />
                             </div>
-                            <a href="http://www.cwse-on.ca/" target="_blank">
+                            <a
+                                href="http://www.cwse-on.ca/"
+                                target="_blank"
+                                rel="noreferrer">
                                 <FontAwesomeIcon
                                     className={styles.icon}
                                     icon={faLink}
@@ -49,7 +52,8 @@ const Biography = () => {
                             </a>
                             <a
                                 href="https://www.linkedin.com/in/catherine-mavriplis/?originalSubdomain=ca"
-                                target="_blank">
+                                target="_blank"
+                                rel="noreferrer">
                                 <FontAwesomeIcon
                                     className={styles.icon}
                                     icon={["fab", "linkedin"]}
@@ -74,7 +78,9 @@ const Biography = () => {
                             </Link>
                         </div>
                         <div className={styles.card}>
-                            <HashLink smooth to="/#research">Researches</HashLink>
+                            <HashLink smooth to="/#research">
+                                Researches
+                            </HashLink>
                         </div>
                     </div>
                 </div>

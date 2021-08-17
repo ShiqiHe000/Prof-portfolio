@@ -12,7 +12,7 @@ import styles from "./Contact.module.scss";
 
 const Contact = () => {
     return (
-        <div className={`scrollType ${styles.container}`}>
+        <div className={`scrollType ${styles.container}`} id="contact">
             <Background className={styles.background} />
             <div className="container">
                 <h1 className={styles.title}>Contacts</h1>
