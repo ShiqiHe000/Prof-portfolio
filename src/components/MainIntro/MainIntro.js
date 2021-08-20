@@ -7,7 +7,7 @@ import Research from "../Research/Research";
 
 const MainIntro = () => {
     return (
-        <div className="scrollControl">
+        <div className="scrollControl" data-scrollcontrol>
             <Landing />
             <Biography />
             <Research />

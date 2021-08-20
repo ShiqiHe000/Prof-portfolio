@@ -15,11 +15,11 @@ import { ReactComponent as WaveSvg } from "../../imgs/wave.svg";
 const Biography = () => {
     return (
         <div
-            className={`scrollType ${styles.biographyContainer}`}
+            className={`scrollType svgBackgroundContainer`}
             id="biography">
-            <WaveSvg className={styles.wave} />
+            <WaveSvg className="svgBackground" />
             <div className={`container ${styles.gridContainer}`}>
-                <h1 class={styles.title}>Biography</h1>
+                <h1 className={styles.title}>Biography</h1>
                 <div className={styles.rightColumn}>
                     <img
                         src={bioPhoto}

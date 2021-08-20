@@ -4,45 +4,36 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "../../scss/CardTemplates.module.scss";
-import { ReactComponent as WaveSvg } from "../../imgs/wave.svg";
+import { ReactComponent as Background } from "../../imgs/Vorderrhein.svg";
 import { cardFadeIn } from "../../js/cardAnimation";
 
-const InterestedFields = () => {
+const FluidDynamics = () => {
     useEffect(() => {
         cardFadeIn("[data-card]");
     }, []);
-
     return (
         <div className="svgBackgroundContainer">
-            <WaveSvg className="svgBackground" />
-
+            <Background className="svgBackground" />
             <div className="container">
                 <h1 className={`${styles.title} ${styles.mainTitle}`}>
-                    Fields of Interest
+                    Fluid Dynamics
                 </h1>
-
+                <h3 className={`${styles.title} ${styles.subtitle}`}>
+                    Aerospace, Biofluid, combustion and more...
+                </h3>
                 <div className={styles.card} data-card>
-                    Numerical methods for fluid dynamics and interdisciplinary
-                    applications: biofluids, combustion, MEMS and meteorology.
+                    Naka wings
                 </div>
-
                 <div className={styles.card} data-card>
-                    Aerospace engineering, including aerodynamics, transition
-                    and receptivity.
+                    Icing
                 </div>
-
                 <div className={styles.card} data-card>
-                    High order methods and adaptivity.
-                </div>
-
-                <div className={styles.card} data-card>
-                    Advancement of women in science, engineering and mathematics
-                    careers.
+                    Bio fluid
                 </div>
 
                 <HashLink
                     smooth
-                    to="/#biography"
+                    to="/#research"
                     className={styles.btn}
                     data-card>
                     <FontAwesomeIcon
@@ -56,4 +47,4 @@ const InterestedFields = () => {
     );
 };
 
-export default InterestedFields;
+export default FluidDynamics;

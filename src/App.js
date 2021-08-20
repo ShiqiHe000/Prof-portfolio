@@ -8,6 +8,8 @@ import Positions from "./components/BiographyCards/Positions";
 import MainIntro from "./components/MainIntro/MainIntro";
 import Education from "./components/BiographyCards/Education";
 import InterestedFields from "./components/BiographyCards/InterestedFields";
+import SoftwareDevelopment from "./components/SoftwareDevelopment/SoftwareDevelopment";
+import FluidDynamics from "./components/FluidDynamics/FluidDynamics";
 
 library.add(fab);
 
@@ -28,6 +30,12 @@ const App = () => {
                     </Route>
                     <Route exact path="/fieldsOfInterest">
                         <InterestedFields />
+                    </Route>
+                    <Route exact path="/software-development">
+                        <SoftwareDevelopment />
+                    </Route>
+                    <Route exact path="/fluid-dynamics">
+                        <FluidDynamics />
                     </Route>
                 </Switch>
             </Router>

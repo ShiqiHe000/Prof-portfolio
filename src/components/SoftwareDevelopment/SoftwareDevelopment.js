@@ -4,45 +4,39 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "../../scss/CardTemplates.module.scss";
-import { ReactComponent as WaveSvg } from "../../imgs/wave.svg";
+import { ReactComponent as Background } from "../../imgs/Vorderrhein.svg";
 import { cardFadeIn } from "../../js/cardAnimation";
 
-const InterestedFields = () => {
+const SoftwareDevelopment = () => {
     useEffect(() => {
         cardFadeIn("[data-card]");
     }, []);
-
     return (
         <div className="svgBackgroundContainer">
-            <WaveSvg className="svgBackground" />
-
+            <Background className="svgBackground" />
             <div className="container">
                 <h1 className={`${styles.title} ${styles.mainTitle}`}>
-                    Fields of Interest
+                    Software Development
                 </h1>
-
+                <h3 className={`${styles.title} ${styles.subtitle}`}>
+                    Adaptive High-order Numerical Methods
+                </h3>
                 <div className={styles.card} data-card>
-                    Numerical methods for fluid dynamics and interdisciplinary
-                    applications: biofluids, combustion, MEMS and meteorology.
+                    A parallel <b>hp-adaptive high order</b> discontinuous Galerkin
+                    method for the incompressible <b>Navier-Stokes equations</b>
                 </div>
-
                 <div className={styles.card} data-card>
-                    Aerospace engineering, including aerodynamics, transition
-                    and receptivity.
+                    <b>Dynamic Load Balancing</b> for a hp-adaptive Discontinuous
+                    Galerkin Wave Equation Solver via <b>Spacing-Filling Curve</b> and
+                    <b>Advanced Data Structure</b>
                 </div>
-
                 <div className={styles.card} data-card>
-                    High order methods and adaptivity.
-                </div>
-
-                <div className={styles.card} data-card>
-                    Advancement of women in science, engineering and mathematics
-                    careers.
+                    GPU
                 </div>
 
                 <HashLink
                     smooth
-                    to="/#biography"
+                    to="/#research"
                     className={styles.btn}
                     data-card>
                     <FontAwesomeIcon
@@ -56,4 +50,4 @@ const InterestedFields = () => {
     );
 };
 
-export default InterestedFields;
+export default SoftwareDevelopment;

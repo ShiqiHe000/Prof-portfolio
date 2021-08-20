@@ -24,12 +24,11 @@ const Navbar = () => {
                         showNavbar ? styles.active : ""
                     }`}>
                     <li>
-                    <NavHashLink
+                        <NavHashLink
                             to="/#landing"
                             onClick={toggleNavbar}
                             activeClassName="selected"
-                            smooth
-                            >
+                            smooth>
                             Home
                         </NavHashLink>
                     </li>
@@ -38,8 +37,7 @@ const Navbar = () => {
                             to="/#biography"
                             onClick={toggleNavbar}
                             activeClassName="selected"
-                            smooth
-                            >
+                            smooth>
                             Biography
                         </NavHashLink>
                     </li>
@@ -48,23 +46,25 @@ const Navbar = () => {
                             to="/#research"
                             onClick={toggleNavbar}
                             activeClassName="selected"
-                            smooth
-                            >
+                            smooth>
                             Reseach
                         </NavHashLink>
                     </li>
                     <li>
-                        <a href="/" onClick={toggleNavbar}>
+                        <NavHashLink
+                            to="/#publications"
+                            onClick={toggleNavbar}
+                            activeClassName="selected"
+                            smooth>
                             Publications
-                        </a>
+                        </NavHashLink>
                     </li>
                     <li>
-                    <NavHashLink
+                        <NavHashLink
                             to="/#contact"
                             onClick={toggleNavbar}
                             activeClassName="selected"
-                            smooth
-                            >
+                            smooth>
                             Contacts
                         </NavHashLink>
                     </li>

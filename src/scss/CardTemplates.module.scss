@@ -1,4 +1,4 @@
-@import "../../scss/variables";
+@import "./variables";
 
 .title {
     font-family: $font-family-playfair;
@@ -33,30 +33,26 @@
     border-radius: 10px;
     width: 100%;
     margin-bottom: 2rem;
+    text-decoration: none;
+    font-weight: $font-weight-semi-bold;
+    text-align: center;
 
     &:hover .arrow {
         animation: arrow-left 0.7s linear infinite;
     }
 
-    a {
-        text-decoration: none;
-        color: inherit;
-        font-weight: $font-weight-semi-bold;
-    }
 }
 
 .arrow {
     margin-right: 1rem;
 }
 
+
 @media screen and (min-width: $break-large) {
     .card {
         text-align: left;
     }
 
-    .btn {
-        width: auto;
-    }
 }
 
 @keyframes arrow-left {

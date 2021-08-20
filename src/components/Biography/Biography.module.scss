@@ -136,20 +136,6 @@ $photo-height: 250px;
     }
 }
 
-.biographyContainer {
-    position: relative;
-    overflow: hidden;
-}
-
-.wave {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    opacity: 0.2;
-}
 
 @media screen and (min-width: $break-large) and (min-height: $break-medium) {
     .gridContainer {
