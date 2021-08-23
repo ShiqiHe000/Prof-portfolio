@@ -10,8 +10,8 @@ import bookChaptersSvg from "../../imgs/book-chapters.svg";
 import bookReviewsSvg from "../../imgs/book-reviews.svg";
 import studyingSvg from "../../imgs/studying.svg";
 
-
 const Publications = () => {
+
     return (
         <div className="svgBackgroundContainer scrollType" id="publications">
             <Background className="svgBackground" />
@@ -21,22 +21,22 @@ const Publications = () => {
                 <div className={styles.publicationGrid}>
                     <PublicationModule
                         name={"Journal Articles"}
-                        url={"#"}
+                        url={`/publications/journalArticles`}
                         illutraction={journalArticalSvg}
                     />
                     <PublicationModule
                         name={"Journal Issues"}
-                        url={"#"}
+                        url={"/publications/journalIssues"}
                         illutraction={journalIssuesSvg}
                     />
                     <PublicationModule
                         name={"Books"}
-                        url={"#"}
+                        url={"/publications/books"}
                         illutraction={booksSvg}
                     />
                     <PublicationModule
                         name={"Book Chapters"}
-                        url={"#"}
+                        url={"/publications/bookChapters"}
                         illutraction={bookChaptersSvg}
                     />
                     <PublicationModule
