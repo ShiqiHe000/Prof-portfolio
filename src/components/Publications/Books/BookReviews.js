@@ -5,21 +5,18 @@ import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "../Bibliography.module.scss";
 import btn from "../../../scss/CardTemplates.module.scss";
-import { books } from "../publicationList";
-import { BooksFormat } from "./BooksFormat";
-import STEMBookCover from '../../../imgs/book-cover/STEM-book-cover.jpg';
+import { bookReviews } from "../publicationList";
+import { BookReviewsFormat } from "./BooksFormat";
 
-const Books = () => {
-    const booCoverList = [STEMBookCover];
-
+const BookReviews = () => {
     return (
         <div className="container">
-            <h1 className="title">Books</h1>
+            <h1 className="title">Book Reviews</h1>
 
             <div className={styles.published}>
                 <ol>
-                    {books.map((book, index) => (
-                        <BooksFormat bib={book} key={book.title} bookCoverList={booCoverList} index={index}/>
+                    {bookReviews.map((review) => (
+                        <BookReviewsFormat bib={review} key={review.title}/>
                     ))}
                 </ol>
             </div>
@@ -34,4 +31,4 @@ const Books = () => {
     );
 };
 
-export default Books;
+export default BookReviews;

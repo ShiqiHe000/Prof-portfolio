@@ -288,8 +288,10 @@ const books = [
         editors: "co-author and co-editor with Heller and Sabila",
         publisher: "Elsevier",
         address: "United States Boston",
+        url: "https://www.elsevier.com/books/forward-to-professorship-in-stem/heller/978-0-12-800855-3", 
         keywords: [2, 4, 5],
     },
+
 ];
 
 const bookChapters = [
@@ -345,6 +347,20 @@ const bookChapters = [
     },
 ];
 
+const bookReviews = [
+    {
+        title: "Review of Absent Aviators - Gender Issues in Aviation, edited by Donna Bridges, Jane Neal-Smith and Albert J. Mills",
+        book: "International Journal of Gender",
+        genre: "Science and Technology", 
+        volume: "10", 
+        issue: "3", 
+        pages: "454-455",
+        year: "2018",
+        system: "Open Journal Systems", 
+        keywords: [1, 2, 3, 4, 5, 6],
+    },
+];
+
 const keywords = {
     1: "Entrepreneurship",
     2: "Gender, Work, and Family",
@@ -363,4 +379,4 @@ const keywords = {
     15: "Biomedical Engineering",
 };
 
-export { journalArticles, keywords, journalIssues, books, bookChapters };
+export { journalArticles, keywords, journalIssues, books, bookChapters, bookReviews };

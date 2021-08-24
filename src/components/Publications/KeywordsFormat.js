@@ -11,7 +11,7 @@ const KeywordsFormat = ({ keywords }) => {
         <div className={styles.keywords}>
             <span>Keywords: </span>
             {keywords.map((keywordId) => (
-                <span className={styles.keyword}>
+                <span className={styles.keyword} key={keywordId}>
                     {keywordsCollection[keywordId]}
                 </span>
             ))}

@@ -42,8 +42,6 @@ function initCanvas(ctx) {
 function animate(ctx, canvas) {
     requestAnimationFrame(animate.bind(this, ctx, canvas));
 
-    // ctx.clearRect(0, 0, canvas.width, canvas.height);
-
     ctx.fillStyle = `rgba(0, 0, 0, ${opacity})`;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -52,7 +50,7 @@ function animate(ctx, canvas) {
     ctx.rotate(radian);
     stars.forEach((star) => star.update());
     ctx.restore();
-    radian += 0.005;
+    radian += 0.002;
 
     if(mouseDown && opacity >= 0.1){
         opacity -= 0.01;

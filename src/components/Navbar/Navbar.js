@@ -47,7 +47,7 @@ const Navbar = () => {
                             onClick={toggleNavbar}
                             activeClassName="selected"
                             smooth>
-                            Reseach
+                            Research
                         </NavHashLink>
                     </li>
                     <li>

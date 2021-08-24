@@ -15,6 +15,7 @@ import NotMatch from "./components/NotMatch/NotMatch";
 import JournalIssues from "./components/Publications/Journals/JournalIssues";
 import Books from "./components/Publications/Books/Books";
 import BookChapters from "./components/Publications/Books/BookChapters";
+import BookReviews from "./components/Publications/Books/BookReviews";
 
 library.add(fab);
 
@@ -53,6 +54,9 @@ const App = () => {
                     </Route>
                     <Route exact path="/publications/bookChapters">
                         <BookChapters />
+                    </Route>
+                    <Route exact path="/publications/bookReviews">
+                        <BookReviews />
                     </Route>
                     <Route path="*">
                         <NotMatch />

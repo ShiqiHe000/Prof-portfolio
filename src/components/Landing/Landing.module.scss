@@ -5,9 +5,49 @@
     height: 100vh;
 
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
+}
+
+.nameContainer {
+    display: flex;
+
+    h1:last-child {
+        margin-left: 1rem;
+    }
+}
+
+.studyRleam {
+    width: 90%;
+    list-style: none;
+    padding-left: 0;
+    font-weight: $font-weight-bold;
+
+    li {
+        text-align: center;
+        position: relative;
+        width: 100%;
+        overflow-x: hidden;
+        opacity: 0;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            background-color: white;
+            transform: translateX(-100%);
+            mix-blend-mode: difference;
+        }
+
+        &:hover::before {
+            animation: slideStrip 0.5s ease-out;
+        }
+    }
 }
 
 .title {
@@ -25,13 +65,48 @@
 }
 
 @media screen and (min-width: $break-large) {
+    .container {
+        flex-direction: row;
+    }
+
     .title {
         font-size: 5rem;
+
+        &:first-child {
+            transform: translateX(-50px);
+        }
+
+        &:last-child {
+            transform: translateX(50px);
+        }
+    }
+
+    .nameContainer {
+        flex-direction: column;
+        width: 550px;
+
+        h1 {
+            margin: 0;
+        }
+    }
+
+    .studyRleam {
+        width: auto;
+        margin-left: 2rem;
+
+        li {
+            text-align: left;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
     }
 }
 
-// height control
-// @media screen and (min-height: $break-medium) {
-//     .container {
-//     }
-// }
+@keyframes slideStrip {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}

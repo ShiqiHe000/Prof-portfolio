@@ -1,6 +1,22 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+export function titleAnimation(titles, studyRealmList){
+    
+    gsap.fromTo(titles, {
+        opacity: 0
+    }, {
+        opacity: 1, 
+        duration: 1.5, 
+        ease: "power4.in", 
+        stagger: .2, 
+        onComplete: cardFadeIn, 
+        onCompleteParams: [studyRealmList]
+    })
+
+}
+
+
 export function cardFadeIn(elements) {
     gsap.fromTo(
         elements,

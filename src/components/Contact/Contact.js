@@ -58,7 +58,7 @@ const Contact = () => {
                             icon={faDoorOpen}
                             className={styles.icon}
                         />
-                        <span className={styles.info}>Office: CBY A331</span>
+                        <span className={styles.info}>Office: CBY A327</span>
                     </div>
                 </div>
             </div>

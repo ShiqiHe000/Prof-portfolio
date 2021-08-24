@@ -41,7 +41,7 @@ const Publications = () => {
                     />
                     <PublicationModule
                         name={"Book Reviews"}
-                        url={"#"}
+                        url={"/publications/bookReviews"}
                         illutraction={bookReviewsSvg}
                     />
                     <PublicationModule
