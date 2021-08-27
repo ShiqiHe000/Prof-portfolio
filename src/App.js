@@ -37,10 +37,10 @@ const App = () => {
                     <Route exact path="/fieldsOfInterest">
                         <InterestedFields />
                     </Route>
-                    <Route exact path="/software-development">
+                    <Route path="/software-development">
                         <SoftwareDevelopment />
                     </Route>
-                    <Route exact path="/fluid-dynamics">
+                    <Route path="/fluid-dynamics">
                         <FluidDynamics />
                     </Route>
                     <Route exact path="/publications/journalArticles">

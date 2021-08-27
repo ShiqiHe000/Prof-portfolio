@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import styles from "./Landing.module.scss";
 import { drawBackground } from "./StartBackground";
-import {titleAnimation, cardFadeIn} from '../../js/cardAnimation';
+import {titleAnimation} from '../../js/cardAnimation';
 
 const Landing = () => {
     const canvas = useRef();
@@ -9,7 +9,6 @@ const Landing = () => {
     useEffect(() => {
         drawBackground(canvas.current);
         titleAnimation(`.${styles.title}`, `.${styles.studyRleam} li`);
-        // cardFadeIn(`.${styles.studyRleam} li`);
     }, []);
 
     return (

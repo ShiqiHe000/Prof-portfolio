@@ -1,15 +1,25 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { HashLink } from "react-router-hash-link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "../../scss/CardTemplates.module.scss";
+import carousels from "../../scss/Carousel.module.scss";
 import { ReactComponent as Background } from "../../imgs/Vorderrhein.svg";
-import { cardFadeIn } from "../../js/cardAnimation";
+import drivenCavity from "../../imgs/softwareDevelopment/driven-cavity.png";
+import GPU from "../../imgs/softwareDevelopment/GPU.jpeg";
+import wave from "../../imgs/softwareDevelopment/LB-wave.png";
+import { shufflePics } from "../../js/CarouselTransfer";
 
 const SoftwareDevelopment = () => {
+    const picContainer = useRef();
+    const researchList = useRef();
     useEffect(() => {
-        cardFadeIn("[data-card]");
+        shufflePics(
+            picContainer.current,
+            researchList.current,
+            carousels.active
+        );
     }, []);
     return (
         <div className="svgBackgroundContainer">
@@ -18,20 +28,33 @@ const SoftwareDevelopment = () => {
                 <h1 className={`${styles.title} ${styles.mainTitle}`}>
                     Software Development
                 </h1>
-                <h3 className={`${styles.title} ${styles.subtitle}`}>
-                    Adaptive High-order Numerical Methods
-                </h3>
-                <div className={styles.card} data-card>
-                    A parallel <b>hp-adaptive high order</b> discontinuous Galerkin
-                    method for the incompressible <b>Navier-Stokes equations</b>
-                </div>
-                <div className={styles.card} data-card>
-                    <b>Dynamic Load Balancing</b> for a hp-adaptive Discontinuous
-                    Galerkin Wave Equation Solver via <b>Spacing-Filling Curve</b> and
-                    <b>Advanced Data Structure</b>
-                </div>
-                <div className={styles.card} data-card>
-                    GPU
+
+                <div className={carousels.grid}>
+                    <div className={carousels.pics} ref={picContainer}>
+                        <img src={GPU} alt="GPU" data-gpu />
+                        <img
+                            src={wave}
+                            alt="load-balancing for reflective wave"
+                            data-lb
+                        />
+                        <img
+                            src={drivenCavity}
+                            alt="driven cavity"
+                            data-driven-cavity
+                        />
+                    </div>
+                    <ul className={carousels.lists} ref={researchList}>
+                        <li
+                            data-name="driven-cavity"
+                            className={carousels.active}>
+                            hp-adaptive High-Order Method On Navier-Stoke
+                            Equations
+                        </li>
+                        <li data-name="lb">Parallel Load-Balancing</li>
+                        <li data-name="gpu">
+                            GPU implementation on Adaptive High-Order Method
+                        </li>
+                    </ul>
                 </div>
 
                 <HashLink

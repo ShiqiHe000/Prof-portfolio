@@ -1,0 +1,132 @@
+@import "./variables";
+
+$circle-radius: 10px;
+$line-height: 2px;
+$line-length: 30px;
+$line-length-long: 100px;
+$pic-width: 300px;
+$pic-height: 300px;
+
+.grid {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.pics {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    pointer-events: none;
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        opacity: 0;
+
+        &:last-child{
+            opacity: 1;
+        }
+    }
+}
+
+.lists {
+    grid-column: 1 / -1;
+    list-style: none;
+    font-size: 1.2rem;
+    padding-left: 50px;
+
+    li {
+        margin-bottom: 1rem;
+        line-height: 1.2;
+        position: relative;
+        background-color: rgba($color: #000000, $alpha: 0.7);
+        padding: 2px;
+        opacity: 0.6;
+        transition: opacity 0.2s ease;
+
+        a{
+            color: inherit;
+            text-decoration: none;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            display: inline-block;
+            left: -($circle-radius) * 1.5;
+            bottom: $circle-radius / 2;
+            height: $circle-radius;
+            width: $circle-radius;
+            border-radius: 50%;
+            background-color: white;
+            box-shadow: 0 0 5px 0 rgba($color: #000000, $alpha: 0.5);
+
+            transition: transform 0.2s ease;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            height: $line-height;
+            left: 0px;
+            bottom: 9px;
+            right: 100%;
+            background-color: white;
+            box-shadow: 0 0 5px 0 rgba($color: #000000, $alpha: 0.5);
+
+            transition: left 0.2s ease;
+        }
+
+        &.active {
+            opacity: 1;
+        }
+
+        &.active::before {
+            transform: translateX(-$line-length);
+        }
+
+        &.active::after {
+            left: -($line-length);
+        }
+    }
+}
+
+@media screen and (min-width: $break-large) {
+    .grid {
+        grid-template-columns: 50% 50%;
+        margin-bottom: 2rem;
+    }
+
+    .pics {
+        position: relative;
+        width: $pic-width;
+        height: $pic-height;
+        opacity: 1;
+    }
+
+    .lists {
+        grid-column: 2 / 3;
+        padding-left: 0;
+
+        li {
+            background: none;
+
+            &.active::before {
+                transform: translateX(-$line-length-long);
+            }
+
+            &.active::after {
+                left: -($line-length-long);
+            }
+        }
+    }
+}

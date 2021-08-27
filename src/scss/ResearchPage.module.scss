@@ -1,0 +1,40 @@
+@import "./variables";
+
+.title {
+    font-family: $font-family-playfair;
+    margin-top: 3rem;
+}
+
+.descriptionContainer {
+    display: grid;
+    grid-template-columns: auto;
+    column-gap: 1rem;
+    margin-top: 1rem;
+
+    .abstractTitle {
+        margin: 0;
+    }
+
+    p {
+        font-size: 1rem;
+        color: $clr-light-grey;
+    }
+}
+
+.researchInfo {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    align-content: start;
+    column-gap: 1rem;
+    row-gap: 0.5rem;
+
+    a{
+        color: inherit;
+    }
+}
+
+@media screen and (min-width: $break-large) {
+    .descriptionContainer {
+        grid-template-columns: 60% 40%;
+    }
+}
