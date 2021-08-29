@@ -24,6 +24,7 @@
     list-style: none;
     padding-left: 0;
     font-weight: $font-weight-bold;
+    color: $clr-light-grey;
 
     li {
         text-align: center;
@@ -93,6 +94,7 @@
     .studyRleam {
         width: auto;
         margin-left: 2rem;
+        max-width: 410px;
 
         li {
             text-align: left;
