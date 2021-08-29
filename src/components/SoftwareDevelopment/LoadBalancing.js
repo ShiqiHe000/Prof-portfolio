@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react'
 import { useHistory } from "react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "../../scss/CardTemplates.module.scss";
-import DevMotor from "./SingleResearch/DevMotor";
+import LoadBalancingShiqiHe from './SingleResearch/LoadBalancingShiqiHe';
 
-const NavierStoke = () => {
+const LoadBalancing = () => {
     const history = useHistory();
 
     const goBack = () => {
@@ -15,7 +15,7 @@ const NavierStoke = () => {
 
     return (
         <div className="container">
-            <DevMotor />
+            <LoadBalancingShiqiHe />
             <hr />
             <button type="button" onClick={goBack} className={styles.btn}>
                 <FontAwesomeIcon icon={faArrowLeft} className={styles.arrow} />
@@ -23,6 +23,6 @@ const NavierStoke = () => {
             </button>
         </div>
     );
-};
+}
 
-export default NavierStoke;
+export default LoadBalancing

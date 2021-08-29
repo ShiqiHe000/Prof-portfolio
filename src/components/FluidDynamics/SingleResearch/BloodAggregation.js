@@ -4,7 +4,7 @@ import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "../../../scss/ResearchPage.module.scss";
 import veins from "../../../imgs/fluidDynamics/cylindersWings/veins.jpg";
-import cylinder from "../FluidDynamics.module.scss";
+import cylinder from "../../../scss/ResearchShowcase.module.scss";
 
 const BloodAggregation = () => {
     return (

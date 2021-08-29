@@ -4,7 +4,7 @@ import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "../../../scss/ResearchPage.module.scss";
 import wing from "../../../imgs/fluidDynamics/cylindersWings/wing.png";
-import cylinder from "../FluidDynamics.module.scss";
+import cylinder from "../../../scss/ResearchShowcase.module.scss";
 
 const HighLiftWing = () => {
     return (

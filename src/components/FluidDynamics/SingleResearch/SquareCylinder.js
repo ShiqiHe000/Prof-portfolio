@@ -4,7 +4,7 @@ import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "../../../scss/ResearchPage.module.scss";
 import squareCylinder from "../../../imgs/fluidDynamics/cylindersWings/square-cylinder.jpg";
-import cylinder from "../FluidDynamics.module.scss";
+import cylinder from "../../../scss/ResearchShowcase.module.scss";
 
 const SquareCylinder = () => {
     return (

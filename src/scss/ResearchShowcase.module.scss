@@ -1,7 +1,9 @@
+@import "./variables";
 
-.fullWidth{
+$youtube-ratio: 560 / 315;
+
+.fullWidth {
     width: 100%;
-    
 }
 
 .controlledWidth {
@@ -10,4 +12,49 @@
     width: 100%;
     display: block;
     margin: 0 auto;
+}
+
+.video {
+    max-width: 400px;
+    width: 100%;
+}
+
+.videoPosition {
+    display: block;
+    margin: 0 auto;
+}
+
+.youtubeVideo {
+    width: 100%;
+    height: width / $youtube-ratio;
+    max-width: 560px;
+    height: 315px;
+}
+
+.LBdemo {
+    width: 100%;
+    max-width: 300px;
+    max-height: 300px;
+    opacity: 0.7;
+}
+
+.figureContainer {
+    display: grid;
+    grid-column: 100%;
+    row-gap: 1rem;
+}
+
+.figureTitle {
+    span {
+        font-size: 0.85em;
+        color: $clr-dark-grey;
+    }
+}
+
+@media screen and (min-width: $break-large) {
+    .figureContainer {
+        grid-template-columns: 50% 50%;
+        column-gap: 1rem;
+        align-items: center;
+    }
 }

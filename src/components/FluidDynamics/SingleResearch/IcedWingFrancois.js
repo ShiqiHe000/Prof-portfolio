@@ -2,7 +2,7 @@ import React from "react";
 
 import styles from "../../../scss/ResearchPage.module.scss";
 import icedWing from "../../../imgs/fluidDynamics/cylindersWings/ice-shape.jpg";
-import cylinder from "../FluidDynamics.module.scss";
+import cylinder from "../../../scss/ResearchShowcase.module.scss";
 
 const IcedWingFrancois = () => {
     return (
