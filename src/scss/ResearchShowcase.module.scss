@@ -26,7 +26,6 @@ $youtube-ratio: 560 / 315;
 
 .youtubeVideo {
     width: 100%;
-    height: width / $youtube-ratio;
     max-width: 560px;
     height: 315px;
 }
@@ -42,12 +41,30 @@ $youtube-ratio: 560 / 315;
     display: grid;
     grid-column: 100%;
     row-gap: 1rem;
+    margin-bottom: 3rem;
 }
 
 .figureTitle {
     span {
         font-size: 0.85em;
         color: $clr-dark-grey;
+    }
+}
+
+
+.dataStructureImage {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto .5rem auto;
+    display: block;
+}
+
+.hashBenefitList{
+    padding-left: 1rem;
+    list-style-position: inside;
+
+    li {
+        color: $clr-light-grey
     }
 }
 

@@ -4,6 +4,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "../../../scss/ResearchPage.module.scss";
 import LBdemo from "../../../imgs/softwareDevelopment/LB.gif";
 import HilbertCurve from "../../../imgs/softwareDevelopment/Hilbert_curve.mp4";
+import waveAmrAndLb from "../../../imgs/softwareDevelopment/combine-wave-equation.mp4";
+import hashExample from "../../../imgs/softwareDevelopment/hash_example.jpg";
+import treeExample from "../../../imgs/softwareDevelopment/tree_example.jpg";
 import research from "../../../scss/ResearchShowcase.module.scss";
 
 const LoadBalancingShiqiHe = () => {
@@ -77,7 +80,7 @@ const LoadBalancingShiqiHe = () => {
             <h3>How to Repartition the Workload by a Curve?</h3>
             <div className={research.figureContainer}>
                 <p>
-                    weave the curve through your computational mesh, then by
+                    Weave the curve through your computational mesh, then by
                     unravelling the curve, you reduce the multidimensional
                     repartitioning problem to a one-dimensional one. Last step,
                     you cut the curve into equal segments - you get the
@@ -85,6 +88,56 @@ const LoadBalancingShiqiHe = () => {
                 </p>
                 <video
                     src={HilbertCurve}
+                    className={`${research.videoPosition} ${research.video}`}
+                    controls
+                    type="video/mp4">
+                    You browser does not support video tag
+                </video>
+            </div>
+
+            <h3>Adaptive Mesh Refinement (AMR) with Hash Table</h3>
+            <div className={research.figureContainer}>
+                <div>
+                    Comparing with <b>tree</b> data structure (upper figure),{" "}
+                    <b>hash table</b> (lower figure) is:
+                    <ul className={research.hashBenefitList}>
+                        <li>Easy to build and maintain in parallel.</li>
+                        <li>
+                            Memory friendly (uses less pointers to construct
+                            than a tree).
+                        </li>
+                        <li>Favouring neighbour element searching.</li>
+                        <li>
+                            No <em>ripple effect</em>.
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <img
+                        src={treeExample}
+                        className={research.dataStructureImage}
+                        alt="tree data structure"
+                    />
+                    <img
+                        src={hashExample}
+                        className={research.dataStructureImage}
+                        alt="hash table data structure"
+                    />
+                </div>
+            </div>
+            <h3>
+                Dynamic Load-Balancing of a hp-adpative Wave Equation Solver
+            </h3>
+            <div className={research.figureContainer}>
+                <p>
+                    <b>Left</b>: red wave reflects on the right wall and forms
+                    the blue wave. hp-refinement applied on the waves.
+                    <br />
+                    <b>Right</b>: dynamic load-balanicng via Hilbert Curve ampng
+                    32 processors.
+                </p>
+                <video
+                    src={waveAmrAndLb}
                     className={`${research.videoPosition} ${research.video}`}
                     controls
                     type="video/mp4">
