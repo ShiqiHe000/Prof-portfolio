@@ -23,7 +23,7 @@ const HighLiftWing = () => {
                     <h4 className={styles.abstractTitle}>Abstract</h4>
                     <p>
                         A three-dimensional computational fluid dynamics
-                        analysis of low Reynolds number [𝑂(104)] flow over a
+                        analysis of low Reynolds number [𝑂(10^4)] flow over a
                         30P30N three-element high lift wing is carried out using
                         a high-order spectral element method.
                     </p>

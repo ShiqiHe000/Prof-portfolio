@@ -8,7 +8,10 @@ import styles from "./Navbar.module.scss";
 const Navbar = () => {
     const [showNavbar, setShowNavbar] = useState(false);
 
-    const toggleNavbar = () => setShowNavbar(!showNavbar);
+    const toggleNavbar = () => {
+        if (window.innerWidth > 550) return;
+        setShowNavbar(!showNavbar);
+    };
 
     return (
         <div className={styles.navBackground}>

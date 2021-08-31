@@ -13,6 +13,7 @@ import wave from "../../imgs/softwareDevelopment/LB-wave.png";
 import { shufflePics } from "../../js/CarouselTransfer";
 import NavierStoke from "./NavierStoke";
 import LoadBalancing from "./LoadBalancing";
+import GpuAdaptive from "./GpuAdaptive";
 
 const SoftwareDevelopment = () => {
     const { url } = useRouteMatch();
@@ -62,11 +63,15 @@ const SoftwareDevelopment = () => {
                                     </Link>
                                 </li>
                                 <li data-name="lb">
-                                    <Link to={`${url}/load-balancing`}>Parallel Load-Balancing</Link>
+                                    <Link to={`${url}/load-balancing`}>
+                                        Parallel Load-Balancing
+                                    </Link>
                                 </li>
                                 <li data-name="gpu">
-                                    GPU implementation on Adaptive High-Order
-                                    Method
+                                    <Link to={`${url}/gpu-adaptive`}>
+                                        GPU implementation on Adaptive
+                                        High-Order Method
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
@@ -90,6 +95,9 @@ const SoftwareDevelopment = () => {
             </Route>
             <Route path={`${url}/load-balancing`}>
                 <LoadBalancing />
+            </Route>
+            <Route path={`${url}/gpu-adaptive`}>
+                <GpuAdaptive />
             </Route>
         </Switch>
     );
